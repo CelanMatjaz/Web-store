@@ -5,9 +5,9 @@ import User from '../database/Models/User';
 import products from './products';
 
 const ResetDB = () => {
-    Order.remove(() => console.log('Wiped Order'));
-    User.remove(() => console.log('Wiped User'));
-    Product.remove(() => console.log('Wiped Product'));
+    Order.deleteMany({}, () => console.log('Wiped Order'));
+    User.deleteMany({}, () => console.log('Wiped User'));
+    Product.deleteMany({}, () => console.log('Wiped Product'));
     //Add products to product table
     products.forEach(product => {
         const prod = new Product({
