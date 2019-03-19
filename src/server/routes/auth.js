@@ -98,7 +98,7 @@ router.post('/check-login', getToken, (req, res) => {
 router.post('/add-address', getToken, (req, res) => {
     const { address } = req.body;
     //Check if all the properties are filled
-    if(addressID && street && zipCode && number && city && country)
+    if(street && zipCode && number && city && country)
         //Check if token is valid
         jwt.verify(req.token, secret, (err, decoded) => {
             //Check if the token really is valid
