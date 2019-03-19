@@ -9,6 +9,13 @@ const secret = 'secret'
 
 const router = express.Router();
 
+//Sends all products 
+router.get('/products', (req, res) => {
+    Product.find({}, (err, arr) => {
+        res.json(arr || []);
+    });
+});
+
 //Make new order
 router.post('/order', getToken, (req, res) => {
     //Check token
