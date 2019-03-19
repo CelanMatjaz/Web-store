@@ -9,7 +9,7 @@ const Order = props => {
     const date = props.data.date.slice(0, 10);
     let value = 0;
     props.data.products.forEach(item => {
-        value += item.price;
+        value += item.price * item.cartQuantity;
     });
     return (
         <div>
