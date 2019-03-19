@@ -14,7 +14,7 @@ const Order = props => {
     return (
         <div>
             <h2 style={hStyle}>Address</h2>
-            <Address address={props.data.address}/>
+            <Address address={props.data.address} dontShowButtons={true}/>
             <h2 style={hStyle}>Items</h2>
             {cartItems}
             <small>{date}</small> <h2>Total value: {value}€</h2>
