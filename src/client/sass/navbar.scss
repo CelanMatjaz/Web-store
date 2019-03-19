@@ -1,0 +1,59 @@
+$colorDark: #313131;
+$colorLight: #ff7b0f;
+
+.navbar{
+    height: 120px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: $colorLight;
+    margin-bottom: 20px;
+    border-radius: 0 0 5px 5px;
+    color: $colorDark;
+
+    .title{
+        grid-row-start: span 2;
+        line-height: 60px;
+        font-size: 30px;
+        padding-left: 20px;
+    }
+
+    .links-row{
+        grid-row: 3;
+        margin-right: 20px;
+
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            float: right;
+            height: 100%;
+            user-select: none;
+
+            li{
+                display: inline-block;
+                height: 100%;
+                cursor: pointer;
+            }
+
+            a{
+                height: 100%;
+                display: block;
+                padding: 10px;
+                color: black;
+                border-radius: 4px 4px 0 0;
+
+                &:hover{
+                    background-color: $colorDark;
+                    color: white;
+                }
+            }
+        }        
+    }
+
+    .bottom-row{
+        grid-row: 4;
+        background-color: $colorDark;
+        height: 100%;
+        border-radius: 0 0 4px 4px;
+    }
+}

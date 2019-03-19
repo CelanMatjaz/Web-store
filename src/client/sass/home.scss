@@ -1,0 +1,13 @@
+$colorDark: #313131;
+$colorLight: #ff7b0f;
+
+.product-list, .home, .cart, .addresses, .account, .add-address, .payment, .checkout{
+    background-color: $colorDark;
+    border-radius: 4px;
+    padding: 20px;
+    color: white;
+
+    h3{
+        margin: 0;
+    }
+}
