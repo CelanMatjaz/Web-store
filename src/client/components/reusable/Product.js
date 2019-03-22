@@ -29,7 +29,7 @@ class Product extends Component {
                     <div className="product-name">{name}</div>
                     <div className="product-price">{price}€</div>
                     <div className="product-quantity">Left in stock: {quantity}</div> 
-                    <button disabled={inCart || !quantity} onClick={this.handleAddToCard}>{inCart ? 'Added to cart' : 'Add to cart'}</button>  
+                    {quantity > 0 ? <button disabled={inCart || !quantity} onClick={this.handleAddToCard}>{inCart ? 'Added to cart' : 'Add to cart'}</button> : <button disabled>Out of stock</button>}  
                 </div>   
             </div>
         );
