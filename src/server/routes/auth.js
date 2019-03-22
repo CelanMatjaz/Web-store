@@ -79,7 +79,7 @@ router.post('/check-login', getToken, (req, res) => {
         }
         else{
             //Get user id from decoded data from token
-            const { id } = decoded.data;
+            const { id } = decoded;
             //Find a user with the id
             User.findById(id, (err, user) => {
                 //Check if the user exists
