@@ -120,7 +120,7 @@ const productsReducer = (state = initState, action) => {
             return {
                 ...state,
                 checkoutLoading: false,
-                orderMsg: 'The order was not accepted'
+                orderError: 'The order was not accepted'
             }
 
         case RESET_ORDER_ERRORS:
