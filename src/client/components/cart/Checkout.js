@@ -54,7 +54,7 @@ class Checkout extends Component {
         return (
             <div className="checkout">
                 {this.props.orderMsg ? <Message message={this.props.orderMsg}/> : ''}
-                {this.props.orderError ? <Message message={this.props.orderError}/> : ''}
+                {this.props.orderError ? <ErrorMessage message={this.props.orderError}/> : ''}
                 {this.props.orderMsg ? '' : <button onClick={this.handlePlaceOrder} style={{marginBottom: '10px'}}>Order</button>}
                 <h3>Delivery address:</h3>
                 <Address address={address} dontShowButtons={true}/>
